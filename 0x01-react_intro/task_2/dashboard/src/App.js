@@ -12,11 +12,17 @@ function App() {
       </header>
       <body className="App-body">
         <p>Login to access the full dashboard</p>
-        <label for="email"></label>
-        <input type="email"/>
-        <label for="password"></label>
-        <input type="password"/>
-        
+        <form>
+        <div>
+          <label htmlFor="email"></label>
+          <input type="email" />
+        </div>
+        <div>
+        <label htmlFor="password"></label>
+        <input type="password" />
+        </div>
+          <button type="submit">OK</button>
+        </form>
       </body>
       <footer className="App-footer">
         <p>
