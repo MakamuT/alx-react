@@ -1,8 +1,25 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+// src/App.test.js
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders App without crashing", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/School dashboard/i)).toBeInTheDocument();
+});
+
+test("renders App-header", () => {
+  render(<App />);
+  expect(screen.getByText(/School dashboard/i)).toBeInTheDocument();
+});
+
+test("renders App-body", () => {
+  render(<App />);
+  expect(
+    screen.getByText(/Login to access the full dashboard/i)
+  ).toBeInTheDocument();
+});
+
+test("renders App-footer", () => {
+  render(<App />);
+  expect(screen.getByText(/Copyright/i)).toBeInTheDocument();
 });
